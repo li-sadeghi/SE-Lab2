@@ -1,23 +1,14 @@
 package PaymentServices;
 
-public class OnSiteOrderService implements OrderService {
+public class OnSiteOrderService implements RegisterService, PaymentService {
     @Override
-    public void onSiteOrderRegister(String customerName) {
-        System.out.println("on-Site order registered for " + customerName);
+    public void paymentOrder(int foodPrice) {
+        System.out.println("On-site payment with price: " + foodPrice + " Tomans!");
+    }
+    
+    @Override
+    public void registrationOrder(String nameOfCustomer) {
+        System.out.println("On-site order registered for " + nameOfCustomer);
     }
 
-    @Override
-    public void onlineOrderRegister(String customerName) {
-        //Empty Body
-    }
-
-    @Override
-    public void onSiteOrderPayment(int foodPrice) {
-        System.out.println("on-Site Payment with Price : " + foodPrice + " Tomans!");
-    }
-
-    @Override
-    public void onlineOrderPayment(int foodPrice) {
-        //Empty Body!
-    }
 }
