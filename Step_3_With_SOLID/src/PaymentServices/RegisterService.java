@@ -1,5 +1,5 @@
 package PaymentServices;
 
-public interface RegistrationService {
+public interface RegisterService {
     void registrationOrder(String nameOfCustomer);
 }
